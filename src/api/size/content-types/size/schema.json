@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sizes",
+  "info": {
+    "singularName": "size",
+    "pluralName": "sizes",
+    "displayName": "Size",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "size": {
+      "type": "string",
+      "required": true
+    },
+    "folderName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "realWorldDimensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.real-world-dimensions",
+      "required": true
+    },
+    "baseSize": {
+      "type": "decimal",
+      "required": true
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.images",
+      "required": true
+    }
+  }
+}

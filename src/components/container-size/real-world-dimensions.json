@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_container_size_real_world_dimensions",
+  "info": {
+    "displayName": "Real World Dimensions",
+    "icon": "key",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "width": {
+      "type": "decimal",
+      "required": true
+    },
+    "height": {
+      "type": "decimal",
+      "required": true
+    },
+    "length": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

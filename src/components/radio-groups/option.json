@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_radio_groups_options",
+  "info": {
+    "displayName": "option",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "requiresSpecialQuote": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "SKU": {
+      "type": "string",
+      "required": false
+    },
+    "supported_container_sizes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::size.size"
+    }
+  }
+}

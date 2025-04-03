@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "draggable_categories",
+  "info": {
+    "singularName": "draggable-category",
+    "pluralName": "draggable-categories",
+    "displayName": "draggableCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "parentCategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::draggable-category.draggable-category"
+    }
+  }
+}

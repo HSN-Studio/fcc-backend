@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "electrical_packages",
+  "info": {
+    "singularName": "electrical-package",
+    "pluralName": "electrical-packages",
+    "displayName": "Electrical Package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "priceOnCall": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "supportedContainerSize": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::size.size"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

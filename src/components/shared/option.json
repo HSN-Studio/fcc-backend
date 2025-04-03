@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_options",
+  "info": {
+    "displayName": "option"
+  },
+  "options": {},
+  "attributes": {
+    "packageName": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "requiresSpecialQuote": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

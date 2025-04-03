@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "config_options",
+  "info": {
+    "singularName": "config-option",
+    "pluralName": "config-options",
+    "displayName": "ConfigOption",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sizes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::size.size"
+    },
+    "radioGroups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "radio-groups.radio-group",
+      "required": false
+    },
+    "draggables": {
+      "type": "component",
+      "repeatable": true,
+      "component": "draggables.draggables",
+      "required": true
+    }
+  }
+}

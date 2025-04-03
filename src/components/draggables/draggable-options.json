@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_draggables_draggable_options",
+  "info": {
+    "displayName": "draggable-options",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "requiresSpecialQuote": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "realWorldDimensions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.real-world-dimensions",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foam_insulations",
+  "info": {
+    "singularName": "foam-insulation",
+    "pluralName": "foam-insulations",
+    "displayName": "Foam Insulation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "details": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "supportedContainerSize": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::size.size"
+    }
+  }
+}

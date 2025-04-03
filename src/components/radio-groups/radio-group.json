@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_radio_groups_radio_groups",
+  "info": {
+    "displayName": "RadioGroup",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "radio-groups.option",
+      "required": true
+    }
+  }
+}
