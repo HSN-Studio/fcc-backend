@@ -401,151 +401,6 @@ export interface ApiConfigOptionConfigOption extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiDoorDoor extends Struct.CollectionTypeSchema {
-  collectionName: 'doors';
-  info: {
-    description: '';
-    displayName: 'Door';
-    pluralName: 'doors';
-    singularName: 'door';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    color: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icon: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::door.door'> &
-      Schema.Attribute.Private;
-    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    realWorldDimensions: Schema.Attribute.Component<
-      'container-size.real-world-dimensions',
-      false
-    > &
-      Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiDraggableCategoryDraggableCategory
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'draggable_categories';
-  info: {
-    description: '';
-    displayName: 'draggableCategory';
-    pluralName: 'draggable-categories';
-    singularName: 'draggable-category';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::draggable-category.draggable-category'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    parentCategory: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::draggable-category.draggable-category'
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiElectricalPackageElectricalPackage
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'electrical_packages';
-  info: {
-    description: '';
-    displayName: 'Electrical Package';
-    pluralName: 'electrical-packages';
-    singularName: 'electrical-package';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    details: Schema.Attribute.String & Schema.Attribute.Required;
-    icon: Schema.Attribute.Media<'images' | 'files', true> &
-      Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::electrical-package.electrical-package'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    priceOnCall: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-    publishedAt: Schema.Attribute.DateTime;
-    supportedContainerSize: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::size.size'
-    >;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiFoamInsulationFoamInsulation
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'foam_insulations';
-  info: {
-    displayName: 'Foam Insulation';
-    pluralName: 'foam-insulations';
-    singularName: 'foam-insulation';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    details: Schema.Attribute.String & Schema.Attribute.Required;
-    icon: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::foam-insulation.foam-insulation'
-    > &
-      Schema.Attribute.Private;
-    price: Schema.Attribute.Decimal & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    supportedContainerSize: Schema.Attribute.Relation<
-      'oneToOne',
-      'api::size.size'
-    >;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -572,36 +427,6 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     siteName: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiPaintPaint extends Struct.CollectionTypeSchema {
-  collectionName: 'paints';
-  info: {
-    displayName: 'Paint';
-    pluralName: 'paints';
-    singularName: 'paint';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    colorCode: Schema.Attribute.String & Schema.Attribute.Required;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    icon: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::paint.paint'> &
-      Schema.Attribute.Private;
-    location: Schema.Attribute.Enumeration<['Exterior', 'Interior']> &
-      Schema.Attribute.Required;
-    Name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1154,12 +979,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::config-option.config-option': ApiConfigOptionConfigOption;
-      'api::door.door': ApiDoorDoor;
-      'api::draggable-category.draggable-category': ApiDraggableCategoryDraggableCategory;
-      'api::electrical-package.electrical-package': ApiElectricalPackageElectricalPackage;
-      'api::foam-insulation.foam-insulation': ApiFoamInsulationFoamInsulation;
       'api::global.global': ApiGlobalGlobal;
-      'api::paint.paint': ApiPaintPaint;
       'api::size.size': ApiSizeSize;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
