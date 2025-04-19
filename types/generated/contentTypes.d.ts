@@ -381,6 +381,7 @@ export interface ApiConfigOptionConfigOption extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    conditions: Schema.Attribute.JSON & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

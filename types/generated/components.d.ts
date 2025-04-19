@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContainerSizeCondition extends Struct.ComponentSchema {
+  collectionName: 'components_container_size_conditions';
+  info: {
+    displayName: 'Condition';
+  };
+  attributes: {
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.DefaultTo<'New'>;
+  };
+}
+
 export interface ContainerSizeImages extends Struct.ComponentSchema {
   collectionName: 'components_container_size_images';
   info: {
@@ -189,6 +202,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'container-size.condition': ContainerSizeCondition;
       'container-size.images': ContainerSizeImages;
       'container-size.real-world-dimensions': ContainerSizeRealWorldDimensions;
       'draggables.draggable-options': DraggablesDraggableOptions;

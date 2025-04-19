@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_container_size_conditions",
+  "info": {
+    "displayName": "Condition"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "default": "New"
+    }
+  }
+}
