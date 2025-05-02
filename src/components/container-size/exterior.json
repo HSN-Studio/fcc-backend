@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_container_size_exteriors",
+  "info": {
+    "displayName": "exterior"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.images"
+    }
+  }
+}

@@ -36,6 +36,18 @@
       "repeatable": false,
       "component": "container-size.images",
       "required": true
+    },
+    "exterior": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.exterior",
+      "required": true
+    },
+    "interior": {
+      "type": "component",
+      "repeatable": false,
+      "component": "container-size.interior",
+      "required": true
     }
   }
 }

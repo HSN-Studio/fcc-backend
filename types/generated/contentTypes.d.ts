@@ -450,8 +450,12 @@ export interface ApiSizeSize extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    exterior: Schema.Attribute.Component<'container-size.exterior', false> &
+      Schema.Attribute.Required;
     folderName: Schema.Attribute.String;
     images: Schema.Attribute.Component<'container-size.images', false> &
+      Schema.Attribute.Required;
+    interior: Schema.Attribute.Component<'container-size.interior', false> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::size.size'> &

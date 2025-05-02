@@ -13,6 +13,16 @@ export interface ContainerSizeCondition extends Struct.ComponentSchema {
   };
 }
 
+export interface ContainerSizeExterior extends Struct.ComponentSchema {
+  collectionName: 'components_container_size_exteriors';
+  info: {
+    displayName: 'exterior';
+  };
+  attributes: {
+    images: Schema.Attribute.Component<'container-size.images', false>;
+  };
+}
+
 export interface ContainerSizeImages extends Struct.ComponentSchema {
   collectionName: 'components_container_size_images';
   info: {
@@ -29,6 +39,17 @@ export interface ContainerSizeImages extends Struct.ComponentSchema {
     right: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     top: Schema.Attribute.Media<'images' | 'files'> & Schema.Attribute.Required;
+  };
+}
+
+export interface ContainerSizeInterior extends Struct.ComponentSchema {
+  collectionName: 'components_container_size_interiors';
+  info: {
+    description: '';
+    displayName: 'interior';
+  };
+  attributes: {
+    images: Schema.Attribute.Component<'container-size.images', false>;
   };
 }
 
@@ -203,7 +224,9 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'container-size.condition': ContainerSizeCondition;
+      'container-size.exterior': ContainerSizeExterior;
       'container-size.images': ContainerSizeImages;
+      'container-size.interior': ContainerSizeInterior;
       'container-size.real-world-dimensions': ContainerSizeRealWorldDimensions;
       'draggables.draggable-options': DraggablesDraggableOptions;
       'draggables.draggables': DraggablesDraggables;
